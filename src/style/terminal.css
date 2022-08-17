@@ -1,5 +1,5 @@
 :root {
-    --main-bg: "../forest.jpg";
+    --main-bg: url(../forest.jpg);
     --prompt-bg-color: #262626;
     --text-color: #E3B23C;
 }
