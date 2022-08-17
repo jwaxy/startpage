@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color: #E3B23C;
+    --main-bg: "../forest.jpg";
     --prompt-bg-color: #262626;
     --text-color: #E3B23C;
 }
@@ -20,7 +20,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: var(--main-bg-color);
+    background: var(--main-bg);
   }
 
 #screen {
