@@ -9,6 +9,16 @@ function google(args) {
     }
 }
 
+yt = youtube;
+function youtube(args) {
+    window.open("https://www.youtube.com");
+}
+
+gh = github;
+function github(args) {
+    window.open("https://www.github.com");
+}
+
 // Display time
 time = clock;
 function clock(args) {
