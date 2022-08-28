@@ -24,7 +24,23 @@ function submit_command() {
     if (!(event.keyCode === 13)) return;
     var input = document.getElementById("input_source").value;
     document.getElementById("input_source").value = "";
+    
+    function isValidUrl(string) {
+      let url;
 
+      try {
+        url = new URL(string);
+      } catch (_) {
+        return false;  
+      }
+
+      return true;
+    }
+
+    if (isValidUrl(input) === true) {
+        window.open(input,"_self")
+    }
+    
     new_block();
 
     command = input.split(" ")[0];
