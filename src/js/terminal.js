@@ -24,24 +24,23 @@ function submit_command() {
     if (!(event.keyCode === 13)) return;
     var input = document.getElementById("input_source").value;
     document.getElementById("input_source").value = "";
+
+	var regexp = /\b((?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/i;
     
     function isValidUrl(string) {
-      let url;
-
-      try {
-        url = new URL(string);
-      } catch (_) {
-        return false;  
-      }
-
-      return true;
+	if (regexp.test(input)) {
+		return true;
+	} else {
+		return false;
+	}
     }
 
     if (isValidUrl(input) === true) {
         if (!(input.indexOf("http://") == 0 || input.indexOf("https://") == 0)) {
             input = 'http://' + input;
         }
-        window.open(input,"_self")
+        alert(input);
+        window.open(input,"_self");
         return true;
     }
     
