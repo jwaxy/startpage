@@ -3,20 +3,20 @@ g = google;
 function google(args) {
     if (args != undefined) {
         search = args.replace(" ", "+")
-        window.open("https://www.google.com/search?q=" + search);
+        window.open("https://www.google.com/search?q=" + search, "_self");
     } else {
-        window.open("https://www.google.com");
+        window.open("https://www.google.com", "_self");
     }
 }
 
 yt = youtube;
 function youtube(args) {
-    window.open("https://www.youtube.com");
+    window.open("https://www.youtube.com", "_self");
 }
 
 gh = github;
 function github(args) {
-    window.open("https://www.github.com");
+    window.open("https://www.github.com", "_self");
 }
 
 // Display time
