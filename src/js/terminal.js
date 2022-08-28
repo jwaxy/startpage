@@ -25,7 +25,7 @@ function submit_command() {
     var input = document.getElementById("input_source").value;
     document.getElementById("input_source").value = "";
 
-	var regexp = ^(https?:\/\/)?[0-9a-z-_]*(\.[0-9a-z-_]+)*(\.[a-z]+)+(\/[0-9a-z-_]*)*?\/?$;
+	var regexp = /^(https?:\/\/)?[0-9a-z-_]*(\.[0-9a-z-_]+)*(\.[a-z]+)+(\/[0-9a-z-_]*)*?\/?$/im;
     
     function isValidUrl(string) {
 	if (regexp.test(input)) {
