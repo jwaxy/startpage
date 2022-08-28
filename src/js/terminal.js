@@ -25,7 +25,7 @@ function submit_command() {
     var input = document.getElementById("input_source").value;
     document.getElementById("input_source").value = "";
 
-	var regexp = /\b((?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/i;
+	var regexp = ^(https?:\/\/)?[0-9a-z-_]*(\.[0-9a-z-_]+)*(\.[a-z]+)+(\/[0-9a-z-_]*)*?\/?$;
     
     function isValidUrl(string) {
 	if (regexp.test(input)) {
