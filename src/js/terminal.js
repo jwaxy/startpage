@@ -38,6 +38,9 @@ function submit_command() {
     }
 
     if (isValidUrl(input) === true) {
+        if (!/^https?:\/\//i.test(input)) {
+            input = 'http://' + input;
+        }
         window.open(input,"_self")
     }
     
