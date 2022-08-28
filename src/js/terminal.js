@@ -38,7 +38,7 @@ function submit_command() {
     }
 
     if (isValidUrl(input) === true) {
-        if !(input.indexOf("http://") == 0 || input.indexOf("https://") == 0) {
+        if (!(input.indexOf("http://") == 0 || input.indexOf("https://") == 0)) {
             input = 'http://' + input;
         }
         window.open(input,"_self")
